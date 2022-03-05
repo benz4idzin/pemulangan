@@ -10,7 +10,7 @@ $koneksi = mysqli_connect($host, $user, $pass, $database);
 $Email      =$_POST['email'];
 $Password   =$_POST['password'];
 
-$sql = $koneksi-> query("SELECT * FROM pemulangan WHERE email='$Email' AND password='$Password'");
+$sql = $koneksi-> query("SELECT * FROM user WHERE email='$Email' AND password='$Password'");
 
 $cek = mysqli_num_row($sql);
 if (mysqli_num_row($sql) > 0){
